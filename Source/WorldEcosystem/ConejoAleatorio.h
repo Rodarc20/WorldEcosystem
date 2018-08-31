@@ -14,7 +14,8 @@ class WORLDECOSYSTEM_API AConejoAleatorio : public AConejo
 {
 	GENERATED_BODY()
 	
-	
+public:
+    void DeterminarAccion() override;
 	
 	
 };

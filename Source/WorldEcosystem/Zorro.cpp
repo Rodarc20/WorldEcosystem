@@ -55,7 +55,7 @@ void AZorro::Tick(float DeltaTime) {
 }
 
 void AZorro::DeterminarAccion() {
-    if (bMuriendo) {
+    /*if (bMuriendo) {
         AccionActual = EAccionZorro::EMorir;
         return;
     }
@@ -90,7 +90,7 @@ void AZorro::DeterminarAccion() {
     if (AccionActual == EAccionZorro::EComer) {
         ConejoComida->bSiendoComido = true;
         //esto es para reservar el pasto que comere, para que cuando evalue otros conejos, no tomen en cuestan este pasto que ya escogi
-    }
+    }*/
 }
 
 void AZorro::EjecutarAccion() {

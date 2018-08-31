@@ -2,6 +2,8 @@
 
 #include "ConejoProbabilistico.h"
 
-
+void AConejoProbabilistico::DeterminarAccion() {
+    AccionActual = EAccionConejo::EEsperar;
+}
 
 

@@ -166,7 +166,7 @@ void AConejo::Mover(EAccionConejo Movimiento) {
 }
 
 void AConejo::DeterminarAccion() {//esto deberia ser virtual
-    if (bMuriendo) {
+    /*if (bMuriendo) {
         AccionActual = EAccionConejo::EMorir;
         return;
     }
@@ -201,7 +201,7 @@ void AConejo::DeterminarAccion() {//esto deberia ser virtual
     if (AccionActual == EAccionConejo::EComer) {
         PastoComida->bSiendoComido = true;
         //esto es para reservar el pasto que comere, para que cuando evalue otros conejos, no tomen en cuestan este pasto que ya escogi
-    }
+    }*/
 }
 
 void AConejo::EjecutarAccion() {

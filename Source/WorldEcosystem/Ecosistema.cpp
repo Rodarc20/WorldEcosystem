@@ -32,7 +32,8 @@ AEcosistema::AEcosistema()
         PastoType = PastoClass.Class;
     }
 
-    static ConstructorHelpers::FClassFinder<AConejo> ConejoClass(TEXT("Class'/Script/WorldEcosystem.Conejo'"));
+    //static ConstructorHelpers::FClassFinder<AConejo> ConejoClass(TEXT("Class'/Script/WorldEcosystem.Conejo'"));
+    static ConstructorHelpers::FClassFinder<AConejo> ConejoClass(TEXT("Class'/Script/WorldEcosystem.ConejoAleatorio'"));
     if (ConejoClass.Succeeded()) {
         if (GEngine)//no hacer esta verificación provocaba error al iniciar el editor
             GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Conejo type founded."));

@@ -92,7 +92,7 @@ public:
     EAccionConejo AccionActual;
 
     UFUNCTION(BlueprintCallable, Category = "Ecosistema")
-    void DeterminarAccion();
+    virtual void DeterminarAccion();
 
     UFUNCTION(BlueprintCallable, Category = "Ecosistema")
     void EjecutarAccion();

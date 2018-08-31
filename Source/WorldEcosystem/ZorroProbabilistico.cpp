@@ -2,6 +2,8 @@
 
 #include "ZorroProbabilistico.h"
 
-
+void AZorroProbabilistico::DeterminarAccion() {
+    AccionActual = EAccionZorro::EEsperar;
+}
 
 

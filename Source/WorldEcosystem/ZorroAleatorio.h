@@ -14,6 +14,8 @@ class WORLDECOSYSTEM_API AZorroAleatorio : public AZorro
 {
 	GENERATED_BODY()
 	
+public:
+    void DeterminarAccion() override;
 	
 	
 	

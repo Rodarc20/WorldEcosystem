@@ -91,7 +91,7 @@ public:
     EAccionZorro AccionActual;
 
     UFUNCTION(BlueprintCallable, Category = "Ecosistema")
-    void DeterminarAccion();//quiza deberia retornar la accion
+    virtual void DeterminarAccion();//quiza deberia retornar la accion
 
     UFUNCTION(BlueprintCallable, Category = "Ecosistema")
     void EjecutarAccion();
