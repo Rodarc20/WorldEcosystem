@@ -40,7 +40,7 @@ AEcosistema::AEcosistema()
         ConejoType = ConejoClass.Class;
     }
 
-    static ConstructorHelpers::FClassFinder<AZorro> ZorroClass(TEXT("Class'/Script/WorldEcosystem.Zorro'"));
+    static ConstructorHelpers::FClassFinder<AZorro> ZorroClass(TEXT("Class'/Script/WorldEcosystem.ZorroAleatorio'"));
     if (ZorroClass.Succeeded()) {
         if (GEngine)//no hacer esta verificación provocaba error al iniciar el editor
             GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Zorro type founded."));
