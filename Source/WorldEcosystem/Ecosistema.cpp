@@ -14,6 +14,10 @@ AEcosistema::AEcosistema()
 	PrimaryActorTick.bCanEverTick = true;
     RootComponent = CreateDefaultSubobject<USceneComponent>("Root");
 
+    Camara = CreateDefaultSubobject<UCameraComponent>("Camara");
+    Camara->SetupAttachment(RootComponent);
+    Camara->SetRelativeLocation(FVector(-200.0f, 0.0f, 200.0f));
+
     static ConstructorHelpers::FClassFinder<ACelda> CeldaClass(TEXT("Class'/Script/WorldEcosystem.Celda'"));
     if (CeldaClass.Succeeded()) {
         if (GEngine)//no hacer esta verificación provocaba error al iniciar el editor
@@ -62,6 +66,11 @@ AEcosistema::AEcosistema()
 // Called when the game starts or when spawned
 void AEcosistema::BeginPlay() {
 	Super::BeginPlay();
+    APlayerController * PlayerController = UGameplayStatics::GetPlayerController(this, 0);
+    //al parecer el controlador del jugador tiene una un campo camara al cual podemos decirle que camara sera, que la aprecer es un objeto AActor
+    if (PlayerController) {
+        PlayerController->SetViewTarget(this);//cambio instantaneo
+    }
 	
 }
 

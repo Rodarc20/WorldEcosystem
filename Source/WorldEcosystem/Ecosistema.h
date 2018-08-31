@@ -9,6 +9,7 @@
 #include "Conejo.h"
 #include "Zorro.h"
 #include "Engine/EngineTypes.h"
+#include "Camera/CameraComponent.h"
 #include "Ecosistema.generated.h"
 
 UCLASS()
@@ -27,6 +28,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ecosistema")
+    UCameraComponent * Camara;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ecosistema")
     int IteracionActual;
